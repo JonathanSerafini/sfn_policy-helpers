@@ -15,7 +15,7 @@ SparkleFormation.dynamic(:output) do |namespace, *args|
   end
 
   unless config[:value]
-    ::Kernel.raise ArgumentError,new "Dynamic `output` requires a value."
+    ::Kernel.raise ArgumentError.new "Dynamic `output` requires a value."
   end
 
   name = if prefix.any?
