@@ -5,7 +5,7 @@ require 'sfn_policy/helpers/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "sfn_policy-helpers"
-  spec.version       = SfnPolicy::helpers::VERSION
+  spec.version       = SfnPolicy::Helpers::VERSION
   spec.authors       = ["Jonathan Serafini"]
   spec.email         = ["jonathan@lightspeedpos.com"]
   spec.summary       = %q{SparkleFormation policy objects}

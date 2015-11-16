@@ -1,6 +1,6 @@
 require 'attribute_struct'
 
-class SfnPolicy
+module SfnPolicy
   class Parameters
     class << self
       # Initialize parameters
@@ -23,6 +23,10 @@ class SfnPolicy
 
       def lookup(name)
         @parameters[name]
+      end
+
+      def fetch(name, default)
+        lookup(name) || default
       end
     end
   end

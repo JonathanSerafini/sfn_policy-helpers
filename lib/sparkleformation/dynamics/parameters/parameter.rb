@@ -20,8 +20,6 @@ SfnCache[:parameter_attributes] = %w(
 # this dynamic in a context, with the overlay or first occurence taking 
 # precendence :
 # - overlay
-# - `state!` attribute for name used as `default` value
-# - `state!` attribute for namespace used as `default` value
 # - `SfnParameters` for the name
 # - `SfnParameters` for the namespace
 #
@@ -68,12 +66,7 @@ SparkleFormation.dynamic(:parameter) do |namespace, *args|
          else namespace
          end
 
-  state = registry!(:parameter_state, name) ||
-          registry!(:parameter_state, namespace)
-  state = nil if state.is_a?(Hash)
-
   root!.parameters.set!(name) do
-    registry! :attribute_defaults, { default: state } if state
     registry! :attribute_defaults, SfnParameters.fetch(name, {})
     registry! :attribute_defaults, SfnParameters.fetch(namespace, {})
     registry! :attribute_overlays, config if config

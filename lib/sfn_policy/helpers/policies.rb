@@ -1,6 +1,6 @@
 require 'attribute_struct'
 
-class SfnPolicy
+module SfnPolicy
   class Policies
     class << self
       # Initialize policies

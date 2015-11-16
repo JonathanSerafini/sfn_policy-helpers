@@ -35,6 +35,10 @@ SfnRegistry.register(:properties) do |overlays = {}, defaults={}|
 
     registry! :attribute_defaults, defaults
     registry! :attribute_overlays, overlays
+
+    SfnPolicies.lookup(resource[:type]).each do |block|
+      build!(&block)
+    end
   end
 end
 
