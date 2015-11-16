@@ -2,9 +2,9 @@
 # Helper method used to extract only support properties from a hash, for a
 # given resource type.
 #
-# @param [String] aws resource type
-# @param [Hash] attributes hash
-# @returns [Hash] the selected items
+# @yieldparam [String] the aws resource type
+# @yieldparam [Hash] the attributes hash
+# @yieldreturn [Hash] the selected items
 # @since 0.1.0
 SfnRegistry.register(:properties_supported) do |type, configs = {}|
   configs = {} if configs.nil?

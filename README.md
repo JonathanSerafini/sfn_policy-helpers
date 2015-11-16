@@ -1,12 +1,13 @@
 # SparkleFormation Policy / Helpers
 
-This gem provides simple registries and dynamics to augment SparkleFormation.
+Helper methods for SparkleFormatin
 
-Most of the documentation regarding each of the helpers may be found in `rspec`
-format in each of the source files. 
+## What's it do?
 
-## Registry
+Provides some simple low level objects that can be used to streamline working with sparkleformation templates in a reusable manner.
 
+## Documentation
 
-## Dynamics
+Throughout the code, `yardoc` style comments will be supplied. Generating the 
+actual documents is a next step .. grr.
 

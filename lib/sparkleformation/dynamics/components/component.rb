@@ -1,14 +1,14 @@
 
-# Dynamic which will load a name component into the local context.
+# Dynamic which will load a named component into the local context.
 #
 # The component block will be evaluated in a standalone context with the given
 # state attributes defined. Afterwards, any new state attributes as well as the
 # context content will be merge back into the template.
 #
-# @param [String] name of the component to load
-# @param [Hash] state attributes to evaluate in the new context
+# @yieldparam name [String] the name of the component to load
+# @yieldparam state [Hash] (optional) the state attributes to evaluate in the new context
 # 
-# @return [Self]
+# @yieldreturn [Self]
 # @since 0.1.0
 SparkleFormation.dynamic(:component) do |name, state = {}|
   block = _self.components[name.to_sym] ||=

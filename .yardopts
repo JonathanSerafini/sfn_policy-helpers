@@ -1,0 +1,6 @@
+--markup-provider=redcarpet
+--markup=markdown
+--embed-mixins
+--title SparkleFormation
+'lib/sparkleformation/**/*.rb'
+
